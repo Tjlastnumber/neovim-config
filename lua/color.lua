@@ -1,5 +1,4 @@
 vim.opt.cursorline = true
-vim.opt.termguicolors = true
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   callback = function()
