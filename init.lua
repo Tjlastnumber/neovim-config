@@ -1,0 +1,10 @@
+require("plugins")
+require("plugins/nvim-tree")
+require("plugins/lualine")
+require("plugins/tokyonight")
+require("plugins/lsp")
+require("plugins/treesitter")
+require("color")
+require("maps")
+require("base")
+
