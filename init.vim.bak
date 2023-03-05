@@ -1,6 +1,0 @@
-" Options
-set cursorline "Highlights the current line in the editor
-set hidden " Hide unused buffers
-set mouse=a " Allow to use the mouse in the editor
-set number " Shows the line numbers
-set clipboard=unnamedplus " Enables the clipboard between Vim/NeoVim and other applications.
