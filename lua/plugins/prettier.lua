@@ -15,7 +15,7 @@ prettier.setup({
     "vue"
   },
   cli_options = {
-    singleQuote = true,
+    singleQuote = false,
     single_attribute_per_line = false,
     semi = false
   }

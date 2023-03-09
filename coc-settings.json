@@ -1,0 +1,28 @@
+{
+  "eslint.autoFixOnSave": true,
+  "vetur.enable": true,
+  "vetur.format.defaultFormatter.js": "prettier",
+  "vetur.format.defaultFormatter.ts": "prettier-tslint",
+  "vetur.format.defaultFormatter.html": "prettyhtml",
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      "wrap_attributes": "force-expand-multiline"
+    },
+    "prettier": {
+      "singleQuote": false,
+      "semi": false,
+      "eslintIntegration": true,
+      "trailingComma": "none"
+    },
+    "prettyhtml": {
+      "printWidth": 100,
+      "singleQuote": false,
+      "wrapAttributes": true,
+      "sortAttributes": false
+    }
+  },
+  "coc.preferences.formatOnSave": true,
+  "prettier.singleQuote": false,
+  "prettier.semi": false,
+  "prettier.trailingComma": "none"
+}
