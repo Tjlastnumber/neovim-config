@@ -1,5 +1,4 @@
 require("color")
-require("maps")
 require("plugins")
 require("plugins/telescope")
 require("plugins/nvim-tree")
@@ -10,6 +9,7 @@ require("plugins/autopairs")
 require("plugins/comment")
 require("plugins/bufferline")
 require("plugins/gitsigns")
+require("maps")
 require("plugins/coc")
 require("base")
 
