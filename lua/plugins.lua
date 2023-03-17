@@ -28,42 +28,85 @@ return require('packer').startup(function(use)
     'nvim-lualine/lualine.nvim',                              -- 状态栏
     requires = { 'kyazdani42/nvim-web-devicons', opt = true } -- 状态栏图标
   }
+
+  -- 文档树
   use {
-    'nvim-tree/nvim-tree.lua',       -- 文档树
+    'nvim-tree/nvim-tree.lua',
     requires = {
-      'nvim-tree/nvim-web-devicons', -- 文档树图标
+      -- 文档树图标
+      'nvim-tree/nvim-web-devicons',
     }
   }
-  use "christoomey/vim-tmux-navigator"  -- 用ctl-hjkl来定位窗口
-  use "nvim-treesitter/nvim-treesitter" -- 语法高亮
-  use "p00f/nvim-ts-rainbow"            -- 配合treesitter，不同括号颜色区分
-  -- use {
-  --   "williamboman/mason.nvim",
-  --   "williamboman/mason-lspconfig.nvim", -- 这个相当于mason.nvim和lspconfig的桥梁
-  --   "neovim/nvim-lspconfig",
-  --   'jose-elias-alvarez/null-ls.nvim',
-  --   'MunifTanjim/prettier.nvim'
-  -- }
-  -- use 'mhartington/formatter.nvim'
-  -- 自动补全
-  -- use "hrsh7th/nvim-cmp"
-  -- use "hrsh7th/cmp-nvim-lsp"
-  -- use "hrsh7th/cmp-path" -- 文件路径
-  -- use "L3MON4D3/LuaSnip" -- snippets引擎，不装这个自动补全会出问题
-  -- use "saadparwaiz1/cmp_luasnip"
-  -- use "rafamadriz/friendly-snippets"
 
-  use "numToStr/Comment.nvim"   -- gcc和gc注释
-  use "windwp/nvim-autopairs"   -- 自动补全括号
+  -- 用ctl-hjkl来定位窗口
+  use "christoomey/vim-tmux-navigator"
 
-  use "akinsho/bufferline.nvim" -- buffer分割线
-  use "lewis6991/gitsigns.nvim" -- 左则git提示
+  -- 语法高亮
+  use "nvim-treesitter/nvim-treesitter"
+  -- 配合treesitter，不同括号颜色区分
+  use "p00f/nvim-ts-rainbow"
+
+  -- gcc和gc注释
+  use "numToStr/Comment.nvim"
+
+  -- 自动补全括号
+  use "windwp/nvim-autopairs"
+
+  -- buffer分割线
+  use "akinsho/bufferline.nvim"
+
+  -- 左则git提示
+  use "lewis6991/gitsigns.nvim"
+
+  -- COC
   use { 'neoclide/coc.nvim', branch = 'release' }
 
+  -- Common Util
+  use "nvim-lua/plenary.nvim"
+
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1', -- 文件检索
+    -- 文件检索
+    'nvim-telescope/telescope.nvim', tag = '0.1.1',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
+
+  use "lukas-reineke/indent-blankline.nvim"
+
+  -- Show colors
+  use({
+    "norcalli/nvim-colorizer.lua",
+    config = function()
+      require("colorizer").setup({ "*" })
+    end,
+  })
+
+  -- Termianl
+  use({
+    "akinsho/toggleterm.nvim",
+    tag = "*",
+    config = function()
+      require("plugins.toggleterm")
+    end,
+  })
+
+  -- Background Transparent
+  use({
+    "xiyaowong/nvim-transparent",
+    config = function()
+      require("transparent").setup({
+        enable = true,
+        extra_groups = {
+          "BufferLineTabClose",
+          "BufferLineBufferSelcted",
+          "BufferLineFill",
+          "BufferLineBackground",
+          "BufferLineSeparator",
+          "BufferLineIndicatorSelected"
+        },
+        exculde = {}
+      })
+    end
+  })
 
   if packer_bootstrap then
     require('packer').sync()

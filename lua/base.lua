@@ -23,6 +23,10 @@ opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
 opt.wrap = false
+opt.hidden = true
+opt.title = true
+opt.showcmd = true
+opt.inccommand = "split"
 
 opt.ignorecase = true
 opt.smartcase = true
@@ -39,3 +43,5 @@ opt.splitbelow = true
 
 opt.termguicolors = true
 vim.cmd [[colorscheme tokyonight]]
+vim.cmd [[autocmd BufNewFile,BufRead *.wxml set filetype=wxml]]
+vim.cmd [[autocmd BufNewFile,BufRead *.wxss set filetype=wxss]]

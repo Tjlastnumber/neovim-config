@@ -25,5 +25,6 @@
   "prettier.trailingComma": "none",
   "prettier.singleQuote": true,
   "prettier.semi": false,
+  "prettier.useEditorConfig": false,
   "coc.preferences.formatOnSave": true
 }
