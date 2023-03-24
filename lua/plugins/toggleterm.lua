@@ -13,6 +13,7 @@ toggleterm.setup({
     border = "curved",
     highlights = {
       border = "Normal",
+      height = 100,
       background = "Normal",
     },
   },

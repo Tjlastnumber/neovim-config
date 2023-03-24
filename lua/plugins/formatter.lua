@@ -18,26 +18,26 @@ formatter.setup({
     --     }
     --   end,
     -- },
-    javascript = {
-      -- prettier
-      function()
-        return {
-          exe = "prettier",
-          args = {
-            "--stdin-filepath",
-            vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
-            "--single-quote",
-            "--no-semi",
-            "--trailing-comma none",
-            "--arrow-parens avoid",
-            "--end-of-line lf",
-            "--bracket-same-line",
-            "--single-attribute-per-line"
-          },
-          stdin = true,
-        }
-      end,
-    },
+    -- javascript = {
+    --   -- prettier
+    --   function()
+    --     return {
+    --       exe = "prettier",
+    --       args = {
+    --         "--stdin-filepath",
+    --         vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
+    --         "--single-quote",
+    --         "--no-semi",
+    --         "--trailing-comma none",
+    --         "--arrow-parens avoid",
+    --         "--end-of-line lf",
+    --         "--bracket-same-line",
+    --         "--single-attribute-per-line"
+    --       },
+    --       stdin = true,
+    --     }
+    --   end,
+    -- },
     json = {
       function()
         return {

@@ -17,6 +17,6 @@ prettier.setup({
   cli_options = {
     singleQuote = false,
     single_attribute_per_line = false,
-    semi = false
+    semi = false,
   }
 })
