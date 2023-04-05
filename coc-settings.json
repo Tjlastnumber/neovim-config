@@ -3,7 +3,7 @@
   "vetur.enable": true,
   "vetur.format.defaultFormatter.js": "prettier-eslint",
   "vetur.format.defaultFormatter.ts": "prettier-tslint",
-  "vetur.format.defaultFormatter.html": "prettyhtml",
+  "vetur.format.defaultFormatter.html": "prettier",
   "vetur.format.defaultFormatter.css": "prettier",
   "vetur.format.defaultFormatterOptions": {
     "js-beautify-html": {
@@ -13,18 +13,15 @@
       "singleQuote": true,
       "semi": false,
       "eslintIntegration": true,
-      "trailingComma": "none"
-    },
-    "prettyhtml": {
-      "printWidth": 100,
-      "singleQuote": false,
-      "wrapAttributes": true,
-      "sortAttributes": false
+      "trailingComma": "none",
+      "bracketSameLine": true
     }
   },
   "prettier.trailingComma": "none",
   "prettier.singleQuote": true,
   "prettier.semi": false,
   "prettier.useEditorConfig": false,
-  "coc.preferences.formatOnSave": true
+  "prettier.bracketSameLine": true,
+  "html.format.wrapAttributesIndentSize": null,
+  "volar.autoClosingTags": true
 }
