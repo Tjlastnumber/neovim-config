@@ -8,7 +8,7 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 keymap.set("n", "<leader>ss", ":vsplit<Return><C-w>w", { silent = true })
 
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
-keymap.set("n", "<leader>t", ":NvimTreeFindFile<CR>")
+keymap.set("n", "<C-g>", ":NvimTreeFindFile<CR>:NvimTreeFocus<CR>")
 
 keymap.set("n", "<leader>s<left>", "<C-w><")
 keymap.set("n", "<leader>s<down>", "<C-w>-")

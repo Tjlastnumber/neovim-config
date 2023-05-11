@@ -25,8 +25,8 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'folke/tokyonight.nvim'                                 -- 主题
   use {
-    'nvim-lualine/lualine.nvim',                              -- 状态栏
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true } -- 状态栏图标
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
   -- 文档树
@@ -53,7 +53,7 @@ return require('packer').startup(function(use)
   use "windwp/nvim-autopairs"
 
   -- buffer分割线
-  use "akinsho/bufferline.nvim"
+  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
   -- 左则git提示
   use "lewis6991/gitsigns.nvim"
@@ -108,7 +108,8 @@ return require('packer').startup(function(use)
   })
 
   -- diffview
-  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+  -- use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+  -- use { "ntk148v/habamax.nvim", requires={ "rktjmp/lush.nvim" } }
 
   if packer_bootstrap then
     require('packer').sync()
