@@ -7,7 +7,18 @@ require("nvim-tree").setup({
   },
   renderer = {
     icons = {
-      git_placement = 'after'
+      git_placement = 'after',
+      glyphs = {
+        git = {
+          unstaged = "󱙃",
+          staged = "✓",
+          unmerged = "",
+          renamed = "➜",
+          untracked = "★",
+          deleted = "",
+          ignored = "◌",
+        },
+      }
     },
   }
 })
