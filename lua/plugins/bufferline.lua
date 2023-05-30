@@ -16,7 +16,7 @@ require("bufferline").setup {
       return " " .. icon .. count
     end,
     themable = true, -- allows highlight groups to be overriden i.e. sets highlights as default
-    --- 左侧让出 nvim-tree 的位置
+    --- 让出 nvim-tree 的位置
     offsets = {{
       filetype = "NvimTree",
       text = "Directory",
@@ -28,7 +28,7 @@ require("bufferline").setup {
         icon = '▎', -- this should be omitted if indicator style is not 'icon'
         style = 'icon'
     },
-    buffer_close_icon = '',
+    buffer_close_icon = '󰅖',
     modified_icon = '●',
     close_icon = '',
     left_trunc_marker = '',

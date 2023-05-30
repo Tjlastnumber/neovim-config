@@ -1,27 +1,13 @@
 {
   "eslint.autoFixOnSave": true,
-  "vetur.enable": true,
-  "vetur.format.defaultFormatter.js": "prettier-eslint",
-  "vetur.format.defaultFormatter.ts": "prettier-tslint",
-  "vetur.format.defaultFormatter.html": "prettier",
-  "vetur.format.defaultFormatter.css": "prettier",
-  "vetur.format.defaultFormatterOptions": {
-    "js-beautify-html": {
-      "wrap_attributes": "force-expand-multiline"
-    },
-    "prettier": {
-      "singleQuote": true,
-      "semi": false,
-      "eslintIntegration": true,
-      "trailingComma": "none",
-      "bracketSameLine": true
-    }
-  },
   "prettier.trailingComma": "none",
   "prettier.singleQuote": true,
   "prettier.semi": false,
   "prettier.useEditorConfig": false,
   "prettier.bracketSameLine": true,
   "html.format.wrapAttributesIndentSize": null,
-  "volar.autoClosingTags": true
+  "volar.autoClosingTags": true,
+  "[typescript][js]": {
+    "coc.preferences.formatOnSave": true
+  },
 }

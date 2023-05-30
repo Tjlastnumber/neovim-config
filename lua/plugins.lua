@@ -12,21 +12,30 @@ end
 
 local packer_bootstrap = ensure_packer()
 
+-- require('packer').init({
+--   git = {
+--       default_url_format = 'git@github.com:%s'
+--   }
+-- })
+
 -- 保存此文件自动更新安装软件
 -- 注意PackerCompile改成了PackerSync
 vim.cmd([[
   augroup packer_user_config
     autocmd!
     autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
+  augroup end 
 ]])
 
-return require('packer').startup(function(use)
+return require('packer').startup({function(use)
   use 'wbthomason/packer.nvim'
   use 'folke/tokyonight.nvim'                                 -- 主题
+  use "rebelot/kanagawa.nvim"
+  use 'nvim-tree/nvim-web-devicons'
+
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    requires = { 'nvim-tree/nvim-web-devicons' }
   }
 
   -- 文档树
@@ -34,7 +43,7 @@ return require('packer').startup(function(use)
     'nvim-tree/nvim-tree.lua',
     requires = {
       -- 文档树图标
-      'nvim-tree/nvim-web-devicons',
+      'nvim-tree/nvim-web-devicons'
     }
   }
 
@@ -43,6 +52,7 @@ return require('packer').startup(function(use)
 
   -- 语法高亮
   use "nvim-treesitter/nvim-treesitter"
+
   -- 配合treesitter，不同括号颜色区分
   use "p00f/nvim-ts-rainbow"
 
@@ -107,6 +117,9 @@ return require('packer').startup(function(use)
     end
   })
 
+  use 'tpope/vim-surround'
+  use 'junegunn/goyo.vim'
+
   -- diffview
   -- use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
   -- use { "ntk148v/habamax.nvim", requires={ "rktjmp/lush.nvim" } }
@@ -114,4 +127,10 @@ return require('packer').startup(function(use)
   if packer_bootstrap then
     require('packer').sync()
   end
-end)
+end, config = {
+  display = {
+    open_fn = function()
+      return require('packer.util').float({border = 'single'})
+    end
+  }
+}})

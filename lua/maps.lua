@@ -16,8 +16,8 @@ keymap.set("n", "<leader>s<right>", "<C-w>>")
 keymap.set("n", "<leader>s<up>", "<C-w>+")
 
 -- 单行、多行移动
-keymap.set("v", "<C-j>", ":m +1<CR>gv=gv")
-keymap.set("v", "<C-k>", ":m -2<CR>gv=gv")
+-- keymap.set("v", "<C-j>", ":m +1<CR>gv=gv")
+-- keymap.set("v", "<C-k>", ":m -2<CR>gv=gv")
 
 keymap.set("n", "<S-L>", ":bnext<CR>")
 keymap.set("n", "<S-H>", ":bprevious<CR>")
