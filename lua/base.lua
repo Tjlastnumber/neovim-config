@@ -43,6 +43,6 @@ opt.splitbelow = true
 
 opt.termguicolors = true
 
-vim.cmd [[colorscheme kanagawa]]
+vim.cmd [[colorscheme kanagawa-dragon]]
 vim.cmd [[autocmd BufNewFile,BufRead *.wxml set filetype=wxml]]
 vim.cmd [[autocmd BufNewFile,BufRead *.wxss set filetype=wxss]]
