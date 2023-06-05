@@ -35,7 +35,7 @@ require('kanagawa').setup({
       Function = { fg = colors.palette.springGreen },
       String = { fg = colors.palette.sakuraPink },
       Typedef = { fg = colors.palette.crystalBlue },
-      Tag = { fg = colors.palette.carpYellow },
+      Tag = { fg = colors.palette.carpYellow }
     }
   end,
   theme = "wave", -- Load "wave" theme when 'background' option is not set
@@ -45,3 +45,5 @@ require('kanagawa').setup({
     light = "lotus"
   },
 })
+
+vim.cmd [[colorscheme kanagawa-dragon]]

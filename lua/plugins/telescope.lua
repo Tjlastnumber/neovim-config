@@ -11,6 +11,7 @@ require('telescope').setup {
 
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<C-f>', builtin.find_files, {})
+vim.keymap.set('n', '<D-k>', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fa', function()
   builtin.find_files({
     no_ignore = true,

@@ -10,10 +10,10 @@ keymap.set("n", "<leader>ss", ":vsplit<Return><C-w>w", { silent = true })
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 keymap.set("n", "<C-g>", ":NvimTreeFindFile<CR>:NvimTreeFocus<CR>")
 
-keymap.set("n", "<leader>s<left>", "<C-w><")
-keymap.set("n", "<leader>s<down>", "<C-w>-")
-keymap.set("n", "<leader>s<right>", "<C-w>>")
-keymap.set("n", "<leader>s<up>", "<C-w>+")
+keymap.set("n", "<C-S-h>", "<C-w><")
+keymap.set("n", "<C-S-j>", "<C-w>-")
+keymap.set("n", "<C-S-l>", "<C-w>>")
+keymap.set("n", "<C-S-k>", "<C-w>+")
 
 -- 单行、多行移动
 -- keymap.set("v", "<C-j>", ":m +1<CR>gv=gv")

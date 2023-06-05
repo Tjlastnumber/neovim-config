@@ -2,6 +2,7 @@ vim.opt.termguicolors = true
 
 require("bufferline").setup {
   options = {
+    mode = "buffers", -- set to "tabs" to only show tabpages instead
     -- 使用 nvim 内置lsp
     diagnostics = 'coc',
     -- rest of config ...
@@ -34,6 +35,7 @@ require("bufferline").setup {
     left_trunc_marker = '',
     right_trunc_marker = '',
     color_icons = true,
+    tab_size = 5,
   }
 }
 
