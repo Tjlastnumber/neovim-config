@@ -3,6 +3,8 @@ opt.number = true
 opt.relativenumber = true
 
 vim.scriptencoding = 'utf-8'
+vim.foldmethod = 'manual'
+
 opt.encoding = 'utf-8'
 opt.fileencoding = 'utf-8'
 

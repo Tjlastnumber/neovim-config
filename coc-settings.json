@@ -10,4 +10,5 @@
   "[typescript][js]": {
     "coc.preferences.formatOnSave": true
   },
+  "css.lint.unknownAtRules": "ignore"
 }

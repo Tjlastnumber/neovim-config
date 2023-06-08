@@ -27,7 +27,7 @@ require("bufferline").setup {
     }},
     indicator = {
         icon = '▎', -- this should be omitted if indicator style is not 'icon'
-        style = 'icon'
+        style = 'underline'
     },
     buffer_close_icon = '󰅖',
     modified_icon = '●',
@@ -35,9 +35,15 @@ require("bufferline").setup {
     left_trunc_marker = '',
     right_trunc_marker = '',
     color_icons = true,
-    tab_size = 5,
+    tab_size = 18,
+    max_tabs = 5,
+    hover = {
+      enabled = true,
+      delay = 200,
+      reveal = { 'close' }
+    }
   }
 }
 
 
-vim.keymap.set('n', '<leader>x', ":bdelete<CR>")
+vim.keymap.set('n', '<leader>x', ":bdelete! <CR>")

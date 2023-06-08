@@ -14,6 +14,7 @@ keymap.set("n", "<C-S-h>", "<C-w><")
 keymap.set("n", "<C-S-j>", "<C-w>-")
 keymap.set("n", "<C-S-l>", "<C-w>>")
 keymap.set("n", "<C-S-k>", "<C-w>+")
+keymap.set("n", "<leader>=", "<C-A>")
 
 -- 单行、多行移动
 -- keymap.set("v", "<C-j>", ":m +1<CR>gv=gv")
