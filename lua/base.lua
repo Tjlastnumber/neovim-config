@@ -46,14 +46,6 @@ opt.splitbelow = true
 
 opt.termguicolors = true
 opt.linespace = 2.0
-vim.o.guifont = "CaskaydiaCove Nerd Font:h13"
-
--- neovide
-vim.g.neovide_padding_top = 0
-vim.g.neovide_padding_bottom = 0
-vim.g.neovide_padding_right = 1
-vim.g.neovide_padding_left = 1
-vim.g.neovide_hide_mouse_when_typing = true
 
 vim.cmd [[autocmd BufNewFile,BufRead *.wxml set filetype=wxml]]
 vim.cmd [[autocmd BufNewFile,BufRead *.wxss set filetype=wxss]]

@@ -18,6 +18,11 @@ require('kanagawa').setup({
       dragon = {
         ui = {
           bg = "#131313"
+        },
+        syn = {
+          special1 = "#4d9375",
+          special2 = "#4d9375",
+          special3 = "#4d9375"
         }
       },
       all = {}
@@ -25,17 +30,15 @@ require('kanagawa').setup({
   },
   overrides = function(colors)
     return {
-      Keyword = { fg = colors.palette.waveAqua1 },
       Boolean = { fg = colors.palette.waveAqua1 },
       Conditional = { fg = colors.palette.waveAqua1 },
       Label = { fg = colors.palette.waveAqua1 },
       Repeat = { fg = colors.palette.waveAqua1 },
       Operator = { fg = colors.palette.waveAqua1 },
-      Macro = { fg = colors.palette.waveAqua1 },
+      Tag = { fg = colors.palette.waveAqua1 },
       Function = { fg = colors.palette.springGreen },
       String = { fg = colors.palette.sakuraPink },
       Typedef = { fg = colors.palette.crystalBlue },
-      Tag = { fg = colors.palette.carpYellow }
     }
   end,
   theme = "wave", -- Load "wave" theme when 'background' option is not set

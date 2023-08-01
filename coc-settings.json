@@ -10,5 +10,6 @@
   "[typescript][js]": {
     "coc.preferences.formatOnSave": true
   },
-  "css.lint.unknownAtRules": "ignore"
+  "css.lint.unknownAtRules": "ignore",
+  "colors.enable": true
 }

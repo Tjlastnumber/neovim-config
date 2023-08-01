@@ -6,8 +6,13 @@ vim.cmd [[highlight IndentBlanklineIndent4 guifg=#56B6C2 gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent5 guifg=#61AFEF gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C678DD gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineContextSpaceChar guifg=#4d9375 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineContextStart guisp=#4d9375 gui=underline]]
-vim.cmd [[highlight CursorLine guibg=#1f1f1f]]
+vim.cmd [[highlight IndentBlanklineContextStart guisp=#E06C75 gui=underline]]
+vim.cmd [[highlight IndentBlanklineContextStart2 guisp=#E5C07B gui=underline]]
+vim.cmd [[highlight IndentBlanklineContextStart3 guisp=#98C379 gui=underline]]
+vim.cmd [[highlight IndentBlanklineContextStart4 guisp=#56B6C2 gui=underline]]
+vim.cmd [[highlight IndentBlanklineContextStart5 guisp=#61AFEF gui=underline]]
+vim.cmd [[highlight IndentBlanklineContextStart6 guisp=#C678DD gui=underline]]
+vim.cmd [[highlight CursorLine guibg=#2f2f2f]]
 
 vim.opt.list = true
 vim.opt.listchars:append "eol:↴"
@@ -32,12 +37,21 @@ require("indent_blankline").setup {
     "IndentBlanklineIndent6",
     "IndentBlanklineContextSpaceChar",
   },
-  -- char_highlight_list = {
-  --   "IndentBlanklineIndent1",
-  --   "IndentBlanklineIndent2",
-  --   "IndentBlanklineIndent3",
-  --   "IndentBlanklineIndent4",
-  --   "IndentBlanklineIndent5",
-  --   "IndentBlanklineIndent6",
-  -- },
+  context_start_highlight_list = {
+    "IndentBlanklineIndent1",
+    "IndentBlanklineIndent2",
+    "IndentBlanklineIndent4",
+    "IndentBlanklineIndent5",
+    "IndentBlanklineIndent6",
+    "IndentBlanklineContextSpaceChar",
+  },
+  -- context_start_list = {
+  --   "IndentBlanklineContextStart",
+  --   "IndentBlanklineContextStart1",
+  --   "IndentBlanklineContextStart2",
+  --   "IndentBlanklineContextStart3",
+  --   "IndentBlanklineContextStart4",
+  --   "IndentBlanklineContextStart5",
+  --   "IndentBlanklineContextStart6",
+  -- }
 }

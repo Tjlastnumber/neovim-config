@@ -51,8 +51,7 @@ return require('packer').startup({function(use)
   use "christoomey/vim-tmux-navigator"
 
   -- 语法高亮
-  use "nvim-treesitter/nvim-treesitter"
-
+  use { "nvim-treesitter/nvim-treesitter" }
   -- 配合treesitter，不同括号颜色区分
   use "p00f/nvim-ts-rainbow"
 
