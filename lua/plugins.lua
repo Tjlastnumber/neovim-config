@@ -17,7 +17,6 @@ local packer_bootstrap = ensure_packer()
 --       default_url_format = 'git@github.com:%s'
 --   }
 -- })
-
 -- 保存此文件自动更新安装软件
 -- 注意PackerCompile改成了PackerSync
 vim.cmd([[
@@ -51,7 +50,7 @@ return require('packer').startup({function(use)
   use "christoomey/vim-tmux-navigator"
 
   -- 语法高亮
-  use { "nvim-treesitter/nvim-treesitter" }
+  use { "nvim-treesitter/nvim-treesitter", run = ':TSUpdate' }
   -- 配合treesitter，不同括号颜色区分
   use "p00f/nvim-ts-rainbow"
 
@@ -75,7 +74,7 @@ return require('packer').startup({function(use)
 
   use {
     -- 文件检索
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    'nvim-telescope/telescope.nvim', tag = '0.1.4',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
@@ -118,6 +117,12 @@ return require('packer').startup({function(use)
 
   use 'tpope/vim-surround'
   use 'junegunn/goyo.vim'
+
+  -- Chromium use nvim
+  use {
+    'glacambre/firenvim',
+    run = function() vim.fn['firenvim#install'](0) end 
+  }
 
   -- diffview
   -- use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
