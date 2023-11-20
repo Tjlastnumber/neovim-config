@@ -61,7 +61,7 @@ return require('packer').startup({function(use)
   use "windwp/nvim-autopairs"
 
   -- buffer分割线
-  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 
   -- 左则git提示
   use "lewis6991/gitsigns.nvim"

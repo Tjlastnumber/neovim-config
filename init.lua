@@ -7,7 +7,7 @@ require("plugins/toggleterm")
 require("plugins/lualine")
 require("plugins/treesitter")
 require("plugins/autopairs")
-require("plugins/bufferline")
+-- require("plugins/bufferline") -- have bug
 require("plugins/gitsigns")
 require("plugins/coc")
 require("plugins/blankline")
