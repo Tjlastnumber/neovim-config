@@ -10,11 +10,11 @@ require("nvim-tree").setup({
       git_placement = 'after',
       glyphs = {
         git = {
-          unstaged = "󱙃",
+          unstaged = "◉",
           staged = "✓",
           unmerged = "",
           renamed = "➜",
-          untracked = "★",
+          untracked = "●",
           deleted = "",
           ignored = "◌",
         },

@@ -2,9 +2,8 @@ vim.opt.termguicolors = true
 
 require("bufferline").setup {
   options = {
-    mode = "buffers", -- set to "tabs" to only show tabpages instead
-    -- 使用 nvim 内置lsp
-    -- diagnostics = 'coc',
+    mode = "tabs", -- set to "tabs" to only show tabpages instead
+    diagnostics = 'coc',
     -- rest of config ...
 
     --- count is an integer representing total count of errors

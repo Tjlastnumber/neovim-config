@@ -124,6 +124,9 @@ return require('packer').startup({function(use)
     run = function() vim.fn['firenvim#install'](0) end 
   }
 
+  -- 平滑滚动
+  use 'karb94/neoscroll.nvim'
+
   -- diffview
   -- use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
   -- use { "ntk148v/habamax.nvim", requires={ "rktjmp/lush.nvim" } }

@@ -1,11 +1,17 @@
 vim.g.mapleader = " "
 
 local keymap = vim.keymap
+local opt = { noremap = true, silent = true }
 
+-- save
 keymap.set("n", "<leader>w", "<Cmd>w<CR>")
 
+-- delete a word backword
+keymap.set("n", "dw", "vb_d")
+
+-- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
-keymap.set("n", "<leader>ss", ":vsplit<Return><C-w>w", { silent = true })
+keymap.set("n", "<leader>ss", ":vsplit<Return><C-w>w", opt)
 
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 keymap.set("n", "<C-g>", ":NvimTreeFindFile<CR>:NvimTreeFocus<CR>")
@@ -20,6 +26,7 @@ keymap.set("n", "<leader>=", "<C-A>")
 -- keymap.set("v", "<C-j>", ":m +1<CR>gv=gv")
 -- keymap.set("v", "<C-k>", ":m -2<CR>gv=gv")
 
+-- tab
 keymap.set("n", "<S-L>", ":bnext<CR>")
 keymap.set("n", "<S-H>", ":bprevious<CR>")
 
