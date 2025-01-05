@@ -6,7 +6,6 @@
   "prettier.useEditorConfig": false,
   "prettier.bracketSameLine": true,
   "html.format.wrapAttributesIndentSize": null,
-  "volar.autoClosingTags": true,
   "[typescript][js]": {
     "coc.preferences.formatOnSave": true
   },

@@ -125,7 +125,7 @@ return require('packer').startup({function(use)
   }
 
   -- 平滑滚动
-  use 'karb94/neoscroll.nvim'
+  -- use 'karb94/neoscroll.nvim'
 
   -- diffview
   -- use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
